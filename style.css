@@ -60,3 +60,21 @@ body{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     transform: translateX(-50%);
 }
+
+@media screen and (max-width: 510px) {
+    .container {
+    margin: 10px;
+    }
+    .container.color {
+    margin: 8px;
+    padding: 5px;
+    }
+    .color.rect-box { 
+    width: 145px;
+    height: 148px;
+    }
+    .color.hex-value {
+    font-size: 1.05rem;
+
+    }
+}

@@ -21,6 +21,11 @@ const generatedPaletter = () => {
 
 refreshbtn.addEventListener("click", generatedPaletter)
 const copyColor = (elem, hexValue) => {
-    console.log(elem, hexValue)
+    const colorElement = elem.querySelector(".hex-value");
+    console.log(colorElement)
+    navigator.clipboard.writeText(hexValue).then(() => {
+        colorElement.innerText = "Copied";
+        setTimeout(() => colorElement.innerText = hexValue, 1000)
+    }).catch(() => alert("Failed to copy the color code!"));
 }
 generatedPaletter()
